@@ -1,180 +1,256 @@
 // codigo ejecutado :jheisson alejandro lozano cruz
-
 //======================> Crear colección para Participantes <======================//
 db.participantes.insertMany([
   { 
-    "nombre": "Carlos Pérez", 
-    "documento": "123456789", 
-    "fecha_nacimiento": "1990-01-15", 
-    "ranking": 2100 
+    "nombre": "Perez Candelario Manuel",
+    "titulo": "GM",
+    "federacion": "ESP",
+    "elo": 2615,
+    "ranking_inicial": 3
   },
   { 
-    "nombre": "Ana Gómez", 
-    "documento": "123456788", 
-    "fecha_nacimiento": "1995-02-20", 
-    "ranking": 2200 
+    "nombre": "Predke Alexandr",
+    "titulo": "GM",
+    "federacion": "RUS",
+    "elo": 2619,
+    "ranking_inicial": 1
   },
   { 
-    "nombre": "Luis Ramírez", 
-    "documento": "123456787", 
-    "fecha_nacimiento": "1985-03-10", 
-    "ranking": 2300 
+    "nombre": "Solodovnichenko Yuri",
+    "titulo": "GM",
+    "federacion": "UKR",
+    "elo": 2554,
+    "ranking_inicial": 6
   },
   { 
-    "nombre": "Sofía Torres", 
-    "documento": "123456786", 
-    "fecha_nacimiento": "1992-04-05", 
-    "ranking": 2250 
+    "nombre": "Ibarra Jerez Jose Carlos",
+    "titulo": "GM",
+    "federacion": "ESP",
+    "elo": 2542,
+    "ranking_inicial": 8
   },
   { 
-    "nombre": "Jorge Díaz", 
-    "documento": "123456785", 
-    "fecha_nacimiento": "1988-05-30", 
-    "ranking": 2150 
+    "nombre": "Popov Ivan",
+    "titulo": "GM",
+    "federacion": "RUS",
+    "elo": 2585,
+    "ranking_inicial": 4
+  },
+  { 
+    "nombre": "Forcen Esteban Daniel",
+    "titulo": "GM",
+    "federacion": "ESP",
+    "elo": 2567,
+    "ranking_inicial": 5
+  },
+  { 
+    "nombre": "Burmakin Vladimir",
+    "titulo": "GM",
+    "federacion": "RUS",
+    "elo": 2495,
+    "ranking_inicial": 11
+  },
+  { 
+    "nombre": "Grachev Boris",
+    "titulo": "GM",
+    "federacion": "RUS",
+    "elo": 2618,
+    "ranking_inicial": 2
+  },
+  { 
+    "nombre": "Sivuk Vitaly",
+    "titulo": "GM",
+    "federacion": "UKR",
+    "elo": 2523,
+    "ranking_inicial": 10
+  },
+  { 
+    "nombre": "Martinez Reyes Pedro Ramon",
+    "titulo": "FM",
+    "federacion": "VEN",
+    "elo": 2404,
+    "ranking_inicial": 19
   }
 ]);
-
-// Explicación:
-// - Esta colección almacena los datos básicos de los jugadores.
-// - Cada jugador tiene un nombre, documento único, fecha de nacimiento y 
-//   ranking (ELO) que determina su habilidad en el ajedrez.
-
 
 //======================> Crear colección para Árbitros <======================//
 db.arbitros.insertMany([
   { 
-    "nombre": "Mario López", 
-    "documento": "100200300", 
-    "experiencia": "10 años", 
-    "disponibilidad": ["2024-11-20", "2024-11-21", "2024-11-22"] 
+    "nombre": "Árbitro Principal",
+    "titulo": "IA",
+    "federacion": "ESP",
+    "experiencia": "15 años",
+    "disponibilidad": ["2019-04-17", "2019-04-18", "2019-04-19", "2019-04-20", "2019-04-21"]
   },
   { 
-    "nombre": "Lucía Fernández", 
-    "documento": "200300400", 
-    "experiencia": "7 años", 
-    "disponibilidad": ["2024-11-21", "2024-11-22", "2024-11-23"] 
+    "nombre": "Árbitro Adjunto",
+    "titulo": "FA",
+    "federacion": "ESP",
+    "experiencia": "8 años",
+    "disponibilidad": ["2019-04-17", "2019-04-18", "2019-04-19", "2019-04-20", "2019-04-21"]
   }
 ]);
-
-// Explicación:
-// - Los árbitros supervisan las partidas y garantizan que se cumplan las reglas.
-// - Cada árbitro tiene nombre, documento, experiencia en años y días disponibles para arbitrar.
 
 //======================> Crear colección para Partidas <======================//
 db.partidas.insertMany([
   {
-    "jugador_blancas": "Carlos Pérez",
-    "jugador_negras": "Ana Gómez",
-    "fecha": "2024-11-20",
-    "hora": "10:00",
-    "lugar": "Sala 1",
-    "arbitro": "Mario López"
+    "ronda": 1,
+    "jugador_blancas": "Perez Candelario Manuel",
+    "jugador_negras": "Predke Alexandr",
+    "fecha": "2019-04-17",
+    "resultado": "1/2-1/2",
+    "arbitro": "Árbitro Principal"
   },
   {
-    "jugador_blancas": "Luis Ramírez",
-    "jugador_negras": "Sofía Torres",
-    "fecha": "2024-11-20",
-    "hora": "14:00",
-    "lugar": "Sala 2",
-    "arbitro": "Lucía Fernández"
+    "ronda": 1,
+    "jugador_blancas": "Solodovnichenko Yuri",
+    "jugador_negras": "Ibarra Jerez Jose Carlos",
+    "fecha": "2019-04-17",
+    "resultado": "1-0",
+    "arbitro": "Árbitro Adjunto"
   },
   {
-    "jugador_blancas": "Jorge Díaz",
-    "jugador_negras": "Carlos Pérez",
-    "fecha": "2024-11-21",
-    "hora": "10:00",
-    "lugar": "Sala 1",
-    "arbitro": "Mario López"
+    "ronda": 2,
+    "jugador_blancas": "Popov Ivan",
+    "jugador_negras": "Forcen Esteban Daniel",
+    "fecha": "2019-04-18",
+    "resultado": "1/2-1/2",
+    "arbitro": "Árbitro Principal"
   }
 ]);
 
-// Explicación:
-// - Cada partida tiene dos jugadores: uno con piezas blancas y otro con negras.
-// - Incluye la fecha, hora, lugar y el árbitro asignado.
-
+//======================> Crear colección para Resultados Finales <======================//
+db.resultados_finales.insertMany([
+  {
+    "posicion": 1,
+    "jugador": "Perez Candelario Manuel",
+    "puntos": 7.5,
+    "desempate1": 52.0,
+    "desempate2": 56.0,
+    "desempate3": 41.0,
+    "desempate4": 45.50
+  },
+  {
+    "posicion": 2,
+    "jugador": "Predke Alexandr",
+    "puntos": 7.5,
+    "desempate1": 51.5,
+    "desempate2": 56.0,
+    "desempate3": 39.0,
+    "desempate4": 45.75
+  },
+  {
+    "posicion": 3,
+    "jugador": "Solodovnichenko Yuri",
+    "puntos": 7.0,
+    "desempate1": 53.5,
+    "desempate2": 57.5,
+    "desempate3": 40.0,
+    "desempate4": 43.00
+  },
+  {
+    "posicion": 4,
+    "jugador": "Ibarra Jerez Jose Carlos",
+    "puntos": 7.0,
+    "desempate1": 51.0,
+    "desempate2": 56.0,
+    "desempate3": 38.5,
+    "desempate4": 41.25
+  },
+  {
+    "posicion": 5,
+    "jugador": "Popov Ivan",
+    "puntos": 7.0,
+    "desempate1": 50.0,
+    "desempate2": 53.0,
+    "desempate3": 38.0,
+    "desempate4": 39.50
+  },
+  {
+    "posicion": 6,
+    "jugador": "Forcen Esteban Daniel",
+    "puntos": 7.0,
+    "desempate1": 49.5,
+    "desempate2": 54.0,
+    "desempate3": 38.5,
+    "desempate4": 40.75
+  },
+  {
+    "posicion": 7,
+    "jugador": "Burmakin Vladimir",
+    "puntos": 7.0,
+    "desempate1": 49.0,
+    "desempate2": 53.5,
+    "desempate3": 38.5,
+    "desempate4": 39.50
+  },
+  {
+    "posicion": 8,
+    "jugador": "Grachev Boris",
+    "puntos": 7.0,
+    "desempate1": 48.0,
+    "desempate2": 52.5,
+    "desempate3": 37.0,
+    "desempate4": 39.75
+  },
+  {
+    "posicion": 9,
+    "jugador": "Sivuk Vitaly",
+    "puntos": 7.0,
+    "desempate1": 48.0,
+    "desempate2": 51.5,
+    "desempate3": 37.5,
+    "desempate4": 37.25
+  },
+  {
+    "posicion": 10,
+    "jugador": "Martinez Reyes Pedro Ramon",
+    "puntos": 7.0,
+    "desempate1": 47.5,
+    "desempate2": 52.0,
+    "desempate3": 37.0,
+    "desempate4": 38.25
+  }
+]);
 
 // codigo ejecutado :CRISTIAN SANTIAGO RIVERA GUZMAN
 
-//======================> Crear colección para Resultados <======================//
-db.resultados.insertMany([
-  {
-    "partida_id": ObjectId("64f1234567890abcdef12345"), // ID de la primera partida
-    "puntaje_blancas": 1,
-    "puntaje_negras": 0,
-    "ganador": "Carlos Pérez"
-  },
-  {
-    "partida_id": ObjectId("64f1234567890abcdef12346"), // ID de la segunda partida
-    "puntaje_blancas": 0.5,
-    "puntaje_negras": 0.5,
-    "ganador": "Empate"
-  },
-  {
-    "partida_id": ObjectId("64f1234567890abcdef12347"), // ID de la tercera partida
-    "puntaje_blancas": 0,
-    "puntaje_negras": 1,
-    "ganador": "Jorge Díaz"
-  }
-]);
 
-// Explicación:
-// - El resultado de cada partida indica quién ganó y los puntajes obtenidos por las piezas blancas y negras.
-// - Se usa "Empate" si ninguno de los dos jugadores gana.
+//======================> Crear colección para Información del Torneo <======================//
+db.torneo_info.insertOne({
+  "nombre": "Torneo de La Roda",
+  "lugar": "La Roda (Albacete)",
+  "fecha_inicio": "2019-04-17",
+  "fecha_fin": "2019-04-21",
+  "tipo_torneo": "Internacional",
+  "num_rondas": 9,
+  "sistema": "Suizo",
+  "ritmo_juego": "90min + 30seg",
+  "director_torneo": "Director Principal",
+  "arbitro_principal": "Árbitro Principal"
+});
 
-//======================> Crear colección para Tabla de Posiciones <======================//
-db.tabla_posiciones.insertMany([
-  { "jugador": "Carlos Pérez", "partidas_jugadas": 2, "victorias": 1, "empates": 0, "derrotas": 1, "puntos": 1 },
-  { "jugador": "Ana Gómez", "partidas_jugadas": 1, "victorias": 0, "empates": 0, "derrotas": 1, "puntos": 0 },
-  { "jugador": "Luis Ramírez", "partidas_jugadas": 1, "victorias": 0, "empates": 1, "derrotas": 0, "puntos": 0.5 },
-  { "jugador": "Sofía Torres", "partidas_jugadas": 1, "victorias": 0, "empates": 1, "derrotas": 0, "puntos": 0.5 },
-  { "jugador": "Jorge Díaz", "partidas_jugadas": 1, "victorias": 1, "empates": 0, "derrotas": 0, "puntos": 1 }
-]);
+//======================> Consultas útiles <======================//
 
-// Explicación:
-// - La tabla de posiciones muestra un resumen de cada jugador, incluyendo sus partidas jugadas, victorias, empates, derrotas y puntos acumulados.
-//======================> Consultas <======================//
+// Obtener clasificación final ordenada por puntos y desempates
+db.resultados_finales.find().sort({
+  puntos: -1,
+  desempate1: -1,
+  desempate2: -1,
+  desempate3: -1
+});
 
-db.participantes.find();
-//db.participantes.deleteMany({});
-//======================> Obtener la tabla de posiciones ordenada por puntos <======================//
-db.tabla_posiciones.find().sort({ puntos: -1 });
+// Buscar jugadores por título
+db.participantes.find({
+  titulo: "GM"
+});
 
-//======================> Consultar partidas arbitradas por un árbitro específico <======================//
+// Obtener detalles de partidas por fecha
+db.partidas.find({
+  fecha: "2019-04-17"
+});
 
-db.partidas.find(
-  { arbitro: "Mario López" },
-  { _id: 0, fecha: 1, hora: 1, lugar: 1, jugador_blancas: 1, jugador_negras: 1 }
-);
-
-//======================> Consultar resultados de partidas de un jugador específico <======================//
-
-db.resultados.aggregate([
-  {
-    $lookup: {
-      from: "partidas",
-      localField: "partida_id",
-      foreignField: "_id",
-      as: "detalle_partida"
-    }
-  },
-  {
-    $match: {
-      $or: [
-        { "detalle_partida.jugador_blancas": "Carlos Pérez" },
-        { "detalle_partida.jugador_negras": "Carlos Pérez" }
-      ]
-    }
-  },
-  {
-    $project: {
-      _id: 0,
-      partida_id: 1,
-      "detalle_partida.fecha": 1,
-      "detalle_partida.jugador_blancas": 1,
-      "detalle_partida.jugador_negras": 1,
-      puntaje_blancas: 1,
-      puntaje_negras: 1,
-      ganador: 1
-    }
-  }
-]);
+// Obtener jugadores por federación
+db.participantes.find({
+  federacion: "ESP"
+});
